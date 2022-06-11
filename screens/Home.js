@@ -5,23 +5,12 @@ import {
     TouchableOpacity,
     StyleSheet
 } from 'react-native';
+import {HeaderBar} from '../components'
 
 const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <Text>Home</Text>
-
-            <TouchableOpacity
-                onPress={() => navigation.navigate("Rewards")}
-            >
-                <Text>Navigate to Rewards</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                onPress={() => navigation.navigate("Location")}
-            >
-                <Text>Navigate to Locations</Text>
-            </TouchableOpacity>
+          <HeaderBar/>
         </View>
     )
 }
@@ -29,8 +18,6 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
     }
 })
 
